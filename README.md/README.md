@@ -40,3 +40,22 @@ java -cp "bin;lib/mysql-connector-j-9.6.0.jar" main.App
 - La eliminacion es logica: producto.eliminado = 1
 - Se usa PreparedStatement para consultas seguras
 - Se usa transaccion al crear Producto + CodigoBarras
+
+## Arquitectura del proyecto
+
+- config: configuracion de conexion JDBC
+- entities: clases modelo (Producto, CodigoBarras)
+- dao: acceso a datos (CRUD con PreparedStatement)
+- service: logica de negocio y transacciones
+- main: menu de consola
+
+
+## Manejo de transacciones
+
+Al crear un producto se realiza una transaccion:
+- Se inserta Producto
+- Se inserta CodigoBarras
+- Si ocurre un error se hace rollback
+- Si todo es correcto se hace commit
+
+Esto garantiza atomicidad.
