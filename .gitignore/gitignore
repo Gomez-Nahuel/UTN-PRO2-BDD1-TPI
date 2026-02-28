@@ -1,0 +1,13 @@
+# Compilados
+bin/
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
