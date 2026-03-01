@@ -49,7 +49,6 @@ java -cp "bin;lib/mysql-connector-j-9.6.0.jar" main.App
 - service: logica de negocio y transacciones
 - main: menu de consola
 
-
 ## Manejo de transacciones
 
 Al crear un producto se realiza una transaccion:
